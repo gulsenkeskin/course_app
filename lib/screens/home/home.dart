@@ -1,4 +1,5 @@
 import 'package:course_app/constants/colors.dart';
+import 'package:course_app/screens/home/widget/emoji_text.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,8 +9,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(),
-      body: Center(
-        child: Text("Home Page"),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [EmojiText()],
+        ),
       ),
     );
   }
@@ -47,7 +52,8 @@ class HomePage extends StatelessWidget {
               child: Container(
                 height: 8,
                 width: 8,
-                decoration: BoxDecoration(color: kAccent, shape: BoxShape.circle),
+                decoration:
+                    BoxDecoration(color: kAccent, shape: BoxShape.circle),
               ),
             )
           ],
