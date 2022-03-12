@@ -22,8 +22,12 @@ class HomePage extends StatelessWidget {
           Stack(
             children: [
               Container(
-                child: Icon(Icons.notifications, size: 30,),
-              )
+                  decoration: BoxDecoration(
+                      border: Border.all(color: kFontLight, width: 2)),
+                  child: Image.asset(
+                    'assets/icons/notification.png',
+                    width: 30,
+                  ))
             ],
           )
         ],
