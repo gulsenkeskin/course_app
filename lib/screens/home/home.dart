@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
             SearchInput(),
             CategoryTitle(leftText: "Top of the week", rightText: 'view all'),
             CourseItem(
-                course: Course('Gülsen Keskin', 'assets/images/gulsenimg.png',
+                course: Course('Gülsen Keskin', 'assets/images/gulsenimg.jpg',
                     "Flutter", "assets/images/course01.webp"))
           ],
         ),
