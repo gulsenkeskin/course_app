@@ -11,12 +11,14 @@ class FeatureCourse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      
       child: Column(
         children: [
           CategoryTitle(leftText: "Top of the week", rightText: "wiew all"),
           Container(
             height: 300,
             child: ListView.separated(
+              padding: EdgeInsets.all(25),
               scrollDirection: Axis.horizontal,
               itemCount: coursesList.length,
               itemBuilder: (context, index) =>
