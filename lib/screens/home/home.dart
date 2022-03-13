@@ -1,8 +1,11 @@
 import 'package:course_app/constants/colors.dart';
 import 'package:course_app/screens/home/widget/category_title.dart';
+import 'package:course_app/screens/home/widget/course_item.dart';
 import 'package:course_app/screens/home/widget/emoji_text.dart';
 import 'package:course_app/screens/home/widget/search_input.dart';
 import 'package:flutter/material.dart';
+
+import '../../models/course.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,7 +18,14 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
-          children: [EmojiText(),SearchInput(), CategoryTitle(leftText: "Top of the week", rightText: 'view all')],
+          children: [
+            EmojiText(),
+            SearchInput(),
+            CategoryTitle(leftText: "Top of the week", rightText: 'view all'),
+            CourseItem(
+                course: Course('Gülsen Keskin', 'assets/images/gulsenimg.png',
+                    "Flutter", "assets/images/course01.webp"))
+          ],
         ),
       ),
     );
