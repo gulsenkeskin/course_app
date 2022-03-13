@@ -94,7 +94,19 @@ class CourseItem extends StatelessWidget {
                     ))
               ],
             ),
-          )
+          ),
+          Positioned(
+              bottom: 60,
+              right: 20,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    primary: kAccent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    )),
+                onPressed: () {},
+                child: Text('Start'),
+              ))
         ],
       ),
     );

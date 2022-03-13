@@ -8,7 +8,7 @@ class Course {
 
   static List<Course> generateCorses() {
     return [
-      Course('Gülsen Keskin', 'assets/images/gulsenimg.jpg', "Flutter",
+      Course('Gülsen Keskin', 'assets/images/gulsenimg.jpg', "Flutter Layout",
           "assets/images/course01.webp"),
       Course('Filip', 'assets/images/filip.png', "Flutter",
           "assets/images/course08.jpg"),
