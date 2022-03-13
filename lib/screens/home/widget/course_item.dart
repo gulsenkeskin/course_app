@@ -1,5 +1,6 @@
 import 'package:course_app/constants/colors.dart';
 import 'package:course_app/models/course.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CourseItem extends StatelessWidget {
@@ -42,9 +43,13 @@ class CourseItem extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              Image.asset(
-                                course.authorImg,
-                                width: 20,
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.asset(
+                                  course.authorImg,
+                                  width: 20,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                               SizedBox(
                                 width: 5,
@@ -55,9 +60,18 @@ class CourseItem extends StatelessWidget {
                               )
                             ],
                           ),
+                          SizedBox(
+                            height: 5,
+                          ),
                           Row(
                             children: [
-                              Text(course.title),
+                              Text(
+                                course.title,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                    color: kFont),
+                              ),
                               //todo nokta :D hahah
                               Container(
                                 margin: EdgeInsets.symmetric(horizontal: 5),
@@ -66,7 +80,13 @@ class CourseItem extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: kFontLight, shape: BoxShape.circle),
                               ),
-                              Text('2h 22min')
+                              Text(
+                                '2h 22min',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 14,
+                                    color: kFontLight),
+                              )
                             ],
                           )
                         ],
